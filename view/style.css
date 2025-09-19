@@ -13,13 +13,11 @@ body {
     background: #ffffff;
 }
 
-
 #library {
     
     height: auto;
     display: block;
 }
-
 
 .button-container {
     display: flex;
@@ -27,7 +25,6 @@ body {
     gap: 20px;
     margin: 20px 0;
 }
-
 
 .button {
     padding: 12px 25px;
@@ -40,7 +37,6 @@ body {
     transition: 0.3s ease;
     text-transform: uppercase;
 }
-
 
 #login {
     background: #28a745;
