@@ -1,6 +1,6 @@
 <?php
 
-require_once "../Controller/registerController.php";
+require_once "../controller/registercontroller.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

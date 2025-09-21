@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("../Model/database.php");
+require_once("../model/database.php");
 
 // Include PHPMailer classes
 use PHPMailer\PHPMailer\PHPMailer;
@@ -27,15 +27,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt2->bind_param("sss", $token, $expire, $email);
         $stmt2->execute();
 
-        $reset_link = "http://localhost/library-management-system/Controller/reset_password.php?token=$token";
+        $reset_link = "http://localhost/library-management-system/controller/reset_password.php?token=$token";
 
         $mail = new PHPMailer(true);
         try {
             $mail->isSMTP();
             $mail->Host       = 'smtp.hostinger.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'portfolio@swarupkst.com';
-            $mail->Password   = '?Xn!Ln+8Pp>'; 
+            $mail->Username   = 'Give your email here';
+            $mail->Password   = 'give your email password'; 
             $mail->SMTPSecure = 'ssl';
             $mail->Port       = 465;
 

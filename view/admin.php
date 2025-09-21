@@ -1,12 +1,17 @@
 <?php
-require_once "../Controller/registerController.php";
+
+
+require_once "../controller/registerController.php";
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
 }
 
-require_once("../Model/database.php");
+require_once("../model/database.php");
+
+
+
 
 $user_id = $_SESSION['user_id'];
 $sqlUser = "SELECT full_name FROM users WHERE id = $user_id";
@@ -14,6 +19,7 @@ $userResult = $conn->query($sqlUser);
 $user = $userResult->fetch_assoc();
 $user_name = $user['full_name'];
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,13 +36,13 @@ $user_name = $user['full_name'];
         </div>
         <div>
             <a href="profile.php" class="profile-btn">Profile</a>
-            <a href="../Controller/logout.php" class="logout-btn">Logout</a>
+            <a href="../controller/logout.php" class="logout-btn">Logout</a>
         </div>
     </div>
 
 <div class="two_table">
 
-
+  <!-- Student Table -->
    <div class="student_table">
   <table>
   <h2>Students</h2>
@@ -72,6 +78,7 @@ $user_name = $user['full_name'];
 </table>
     </div>
 
+  <!-- Librarian Table -->
    <div class="lib_table">
   <table>
   <h2>Librarians</h2>
@@ -109,6 +116,8 @@ $user_name = $user['full_name'];
 
       <div class="form-container">
       
+    
+
     <?php if ($error): ?>
       <div class="message error"><?php echo esc($error); ?></div>
     <?php endif; ?>

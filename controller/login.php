@@ -1,7 +1,7 @@
 <?php
 session_start(); 
 
-require_once("../Model/database.php");
+require_once("../model/database.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
@@ -20,13 +20,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['username'] = $user['username'];
 
         if ($user['role'] == 'student') {
-            header("Location: ../View/student.php");
+            header("Location: ../view/student.php");
         } 
         elseif ($user['role'] == 'librarian') {
-            header("Location: ../View/librarian.php");
+            header("Location: ../view/librarian.php");
         }
         elseif ($user['role'] == 'admin') {
-            header("Location: ../View/admin.php");
+            header("Location: ../view/admin.php");
         }
         exit();
     } else {

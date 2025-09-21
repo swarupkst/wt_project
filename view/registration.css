@@ -11,7 +11,7 @@ body {
       padding: 25px;
       border-radius: 10px;
       box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-      width: 650px;
+      width: 650px; /* একটু বেশি চওড়া */
     }
     .form-container h2 {
       text-align: center;
@@ -21,7 +21,7 @@ body {
     .form-row {
       display: flex;
       justify-content: space-between;
-      gap: 30px;
+      gap: 30px; /* <-- এখানে কলামের মাঝে gap */
       margin-bottom: 15px;
     }
     .form-group {

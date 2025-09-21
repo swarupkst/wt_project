@@ -1,5 +1,5 @@
 <?php
-require_once("../Model/database.php");
+require_once("../model/database.php");
 
 if (!isset($_GET['token'])) {
     die("❌ No token provided.");
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt2->bind_param("ss", $new_password, $token);
     $stmt2->execute();
 
-    echo "✅ Password changed successfully! <a href='../View/login.php'>Login</a>";
+    echo "✅ Password changed successfully! <a href='../view/login.php'>Login</a>";
     exit();
 }
 ?>
