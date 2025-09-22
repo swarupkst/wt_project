@@ -1,0 +1,169 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+/* Body Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    color:#333;
+}
+
+/* Container and Form Box Styles */
+.container {
+    margin: 0 15px; 
+}
+
+.form-box {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* display: none; */
+}
+
+.form-box.active {
+    display: block;
+}
+
+/* Typography Styles */
+h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 14.5px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.box p {
+    font-size: 22px;
+}
+
+/* Form Elements Styles */
+input, select {
+    width: 100%;
+    padding: 12px;
+    background: #eee;
+    border-radius: 6px;
+    border: 2px solid #e1e1e1;
+    /* border: none; */
+    /* outline: none; */
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 0.5px;
+    margin-top: 16px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    /* border-color: #667eea; */
+    border-color:#2c3e50;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2c3e50;
+    /* background: #007bff; */
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+button:hover {
+    background: #192130;
+    /* background: #0056b3; */
+}
+
+ 
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+#forgotPassword a {
+    display: block;
+    padding-top: 5px;
+    /* color: #192130; */
+    color:#007bff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14.5px;
+    color: ##192130;
+    margin-bottom: 0px;
+}
+
+#forgotPassword a:hover {
+    text-decoration: underline;
+    color: #E43636;
+    transition: color 0.3s ease;
+}
+
+/* Error Message Styles */
+.error-message {
+    padding: 12px;
+    background: #f8d7da;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #a43834;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/*
+h1 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+span {
+    color: #007bff;
+}
+*/
+.error {
+    color: red;
+    font-size: 14px;
+    margin: 0px 0px 0px 5px;
+    display: block;
+}
+
+#backButton {
+    background-color: #a43834;
+}
+#backButton:hover {
+    background-color: red;
+}
